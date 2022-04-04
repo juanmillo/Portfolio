@@ -1,0 +1,9 @@
+section h1 { color: #554b4b; font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif}
+p {font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; margin: 15px;}
+
+body {
+    margin: 15px;
+}
+section {
+    margin: 15px;
+}

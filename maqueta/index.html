@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Juan Millonschik</title>
+    <link rel="stylesheet" href="mis_estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        .nombre{
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            font-size: 35px;
+            letter-spacing: -1.8px;
+            word-spacing: 2px;
+            color: #554b4b;
+            font-weight: normal;
+            text-decoration: none;
+            font-style: normal;
+            font-variant: normal;
+            text-transform: none;
+            margin: 15px;
+        }
+        section {
+            border-style: solid;
+            border-color: #554b4b;
+            border-width: 1px;
+            border-radius: 15px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagenes/ornamental.svg" alt="Juan Millonschik" style="width: 100%;">
+        <h1 class="nombre">Juan Millonschik</h1>
+        <p>Desarrollador web full-stack</p>
+        <p>Licenciado en Letras</p>
+        <p>Buenos Aires, Argentina</p>
+    </header>
+    <section class="mb-2">
+        <h1>Experiencia</h1>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2"><img src="imagenes/01_A_Isologotipo_institucional_fondo_blanco.jpg" class="img-fluid" alt="isologotipo INTI"></div>
+                <div class="col-8"><p id="experiencia">Instituto Nacional de Tecnología Industrial</p></div>
+                <div class="col-2">
+                    <button class="btn btn-primary" onclick="cambiarExperiencia()">Editar</button>
+                </div>
+            </div>
+        </div>
+        
+        
+    </section>
+    <section>
+        <h1>Formación</h1>
+        <p></p>
+    </section>
+    <footer>@2022 ArgentinaPrograma - Millonschik, Juan</footer>
+    <script src="mis_scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
