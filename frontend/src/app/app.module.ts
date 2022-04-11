@@ -7,6 +7,7 @@ import { EncabezadoComponent } from './componentes/encabezado/encabezado.compone
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { FormacionComponent } from './componentes/formacion/formacion.component';
 import { HttpClientModule} from '@angular/common/http';
+import { DatosPersonalesComponent } from './componentes/datos-personales/datos-personales.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HttpClientModule} from '@angular/common/http';
     EncabezadoComponent,
     ExperienciaComponent,
     FormacionComponent,
+    DatosPersonalesComponent,
   ],
   imports: [
     BrowserModule,
