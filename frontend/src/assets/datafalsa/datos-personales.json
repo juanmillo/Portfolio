@@ -1,0 +1,10 @@
+{
+	"persona": 
+		{
+			"fullName": "Juan Millonschik",
+            "ubicacion": "CABA (Argentina)",
+			"titulo": "Licenciado en Letras",
+			"position": "Desarrollador web full-stack",
+			"imagen": "./assets/imagenes/risita.jpg"
+		}
+}

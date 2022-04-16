@@ -1,13 +1,13 @@
 <section class="mb-2">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-2"><img src="assets/imagenes/risita.jpg" alt="Juan Millonschik" style="border-radius: 50%;" class ="img-fluid">
+            <div class="col-2"><img [src]="persona.imagen" alt="Juan Millonschik" style="border-radius: 50%;" class ="img-fluid">
             </div>
             <div class="col-8">
-                <h1 class="nombre">Juan Millonschik</h1>
-                <p>Buenos Aires - Argentina</p>
-                <p>Licenciado en Letras</p>
-                <p>Desarrollador web full-stack</p>
+                <h1 class="nombre">{{persona.fullName}}</h1>
+                <p>{{persona.ubicacion}}</p>
+                <p>{{persona.titulo}}</p>
+                <p>{{persona.position}}</p>
             </div> 
             <div class="col-2">
                 <button class="btn btn-primary">Editar</button>
