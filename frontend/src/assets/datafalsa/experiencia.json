@@ -1,0 +1,14 @@
+{
+	"experiencia": [
+		{
+			"institucion": "Instituto Nacional de Tecnología Industrial",
+			"puesto": "Instructional designer",
+			"img": "./assets/imagenes/01_A_Isologotipo_institucional_fondo_blanco.jpg"
+		},
+		{
+			"institucion": "Comisión Nacional de Evaluación y Acreditación Universitaria",
+			"puesto": "Técnico profesional de evaluación de carreras",
+			"img": "./assets/imagenes/coneau.svg"
+		}
+	]
+}

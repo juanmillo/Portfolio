@@ -17,5 +17,4 @@ export class DatosPersonalesComponent implements OnInit {
       this.persona=data["persona"];
     } )
   }
-
 }

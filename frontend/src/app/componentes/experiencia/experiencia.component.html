@@ -1,21 +1,54 @@
 <section class="mb-2">
-    <h1>Experiencia</h1>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-2"><img src="assets/imagenes/01_A_Isologotipo_institucional_fondo_blanco.jpg" class="img-fluid" alt="isologotipo INTI"></div>
-            <div class="col-8"><p id="experiencia">Instituto Nacional de Tecnología Industrial</p>
-            <p>Instructional designer</p></div>
-            <div class="col-2">
-                <button class="btn btn-primary" onclick="cambiarExperiencia()">Editar</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2"><img src="assets/imagenes/coneau.svg" class="img-fluid" alt="isologotipo Coneau"></div>
-            <div class="col-8"><p id="experiencia">Comisión Nacional de Evaluación y Acreditación Universitaria</p>
-            <p>Técnico profesional de evaluación de carreras</p></div>
-            <div class="col-2">
-                <button class="btn btn-primary">Editar</button>
-            </div>
-        </div>
+  <h1>Experiencia</h1>
+  <div class="container-fluid">
+    <div *ngFor="let item of experiencia" class="row">
+      <div class="col-2"><img [src]="item.img" class="img-fluid" alt=""></div>
+      <div class="col-8">
+        <p id="experiencia">{{item.institucion}}</p>
+        <p>{{item.puesto}}</p>
+      </div>
+      <div class="col-2">
+        <button *ngIf="usuarioAutenticado" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#modalExperiencia" onclick="cambiarExperiencia()">Editar</button>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="modalExperiencia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar experiencia</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form">
+          <div class="form-group">
+            <label for="institucion">Institución:</label>
+            <input type="text" class="form-control" id="institucion" formControlName='institucion'>
+            <div *ngIf="institucion?.invalid && institucion?.touched" class="alert">
+              <div *ngIf="institucion?.errors?.['required']" class="text-danger">
+                Es obligatorio escribir su nombre y apellido.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="puesto">Puesto:</label>
+            <input type="text" class="form-control" id="puesto" formControlName='puesto'>
+          </div>
+          <div class="form-group">
+            <label for="img">Ruta de la imagen:</label>
+            <input type="text" class="form-control" id="img" formControlName='img'>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cerrarModalExperiencia" class="btn btn-secondary"
+          data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" (click)="guardarExperiencia()">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>

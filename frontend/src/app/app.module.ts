@@ -8,6 +8,7 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { FormacionComponent } from './componentes/formacion/formacion.component';
 import { HttpClientModule} from '@angular/common/http';
 import { DatosPersonalesComponent } from './componentes/datos-personales/datos-personales.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DatosPersonalesComponent } from './componentes/datos-personales/datos-p
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
